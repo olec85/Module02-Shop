@@ -1,11 +1,66 @@
-$bg:#eee;
+$text: #27300f;
+$orange:#d26a22;
+$white:#ffffff;
 
-.box{
-    background-color: $bg;
-    &__title{
-        color: #f00;
+
+
+.header{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__nav{
+        display: flex;
+        list-style-type: none;/*убираем точки*/
+        margin: 0;/* обнуляем отступы*/
+        padding-left: 0;/* убераем так же отсуп*/
+        gap: 48px;
     }
-    &__image{
-        max-width: 200px;
+    &__link{
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;/*убрали подчеркивания ссылок*/
+        &:hover{/* вложенность для изменения цвета при наведении на ссылки*/
+            color: $orange;
+            }
     }
+    &__tel{
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
+        &:hover{/* вложенность для изменения цвета при наведении на ссылки*/
+            color: $orange;
+            }
+    }
+    &__cart{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: $orange;
+        background-image: url(../images/cart.svg);
+        background-size: 17px 15px;/*задаем размер картинки*/
+        background-position: center center;/*выставляем картинку по центру*/
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    &__counter{
+        font-size: 8px;
+        color: $white;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+
+    }
+}
+.logo{
+    display: block;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 123px;
+    height: 32px;
 }
