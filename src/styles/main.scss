@@ -104,6 +104,40 @@ body{
     &__link{
         margin-top: 6rem;
     }
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+    }
+    &__cover{
+        flex-basis:763px;
+        height: 763px;
+        border: 1px solid rgba( $green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__line{
+        width: 658px;
+        height: 658px;
+        border: 1px solid rgba( $green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__image{
+        width: 85%;
+        width: 95%;
+        position: absolute;
+        top: 53px;
+        left: 55px;
+    }
 }
 .title{
     font-family: $font-cormorant;
