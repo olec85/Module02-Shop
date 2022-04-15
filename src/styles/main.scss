@@ -145,12 +145,10 @@ body{
         padding: 0;
         position: absolute;
         text-align: left;
-        &_:hover{
-            .main__btn{
+        &:hover{
                 &::before{
                     background-color: $orange;
                     box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
-                }
             }
         }
         &::before{
