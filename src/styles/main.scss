@@ -23,12 +23,12 @@ body{
 
 .header{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto 6rem;
     padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 0;
     &__nav {
         display: flex;
         list-style-type: none;/*убираем точки*/
@@ -75,7 +75,6 @@ body{
         position: absolute;
         right: 1rem;
         top: .6rem;
-
     }
 }
 .logo{
@@ -96,6 +95,8 @@ body{
     background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
+    position: relative;
+    padding-bottom: 18.7rem;
     &__item{
         margin-left: 12rem;
         max-width: 378px;
@@ -119,6 +120,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     &__line{
         width: 658px;
@@ -132,11 +134,105 @@ body{
         position: relative;
     }
     &__image{
-        width: 85%;
-        width: 95%;
+        width: 100%;
         position: absolute;
-        top: 53px;
+        top: 40px;
+        left: 40px;
+    }
+    &__btn{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: absolute;
+        text-align: left;
+        &_:hover{
+            .main__btn{
+                &::before{
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+                }
+            }
+        }
+        &::before{
+            content: '';
+            background-color: $green;
+            width: 11px;
+            height: 11px;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            border-radius: 100%;
+            position: absolute;
+        }
+        &_1{
+            top: 46px;
+            left: 64px;
+            &::before{
+                bottom: 10px;
+                right: -32px;
+            }
+        }
+        &_2{
+            top: 199px;
+            right: -6px;
+            &::before{
+                bottom: 12px;
+                right: 94px;
+            }
+        }
+        &_3{
+            bottom: -40px;
+            right: 224px;
+            &::before{
+                bottom: 51px;
+                right: 36px;
+            }
+           
+        }
+    }
+    &__food{
+        display: block;
+        color: rgba($green, 0.8);
+    }
+    &__tomato{
+        position: absolute;
+        bottom: 115px;
+        right: 133px;
+        width: 11rem;
+    }
+    &__bob1{
+        position: absolute;
+        width: 69px;
+        left: -32px;
+        bottom: 262px;
+    }
+    &__bob2{
+        position: absolute;
+        width: 47px;
+        left: 15px;
+        bottom: 302px;
+    }
+    &__bob3{
+        position: absolute;
+        width: 66px;
         left: 55px;
+        bottom: 250px;
+    }
+    &__cucember{
+        position: absolute;
+        width: 85px;
+        left: 782px;
+        top: -40px;
+    }
+    &__avocado{
+        position: absolute;
+        width: 194px;
+        top: 52px;
+        right: 15px;
+    }
+    &__pepper{
+        position: absolute;
+        width: 86px;
+        top: 395px;
+        left: 38px;
     }
 }
 .title{
